@@ -7,7 +7,7 @@ body{
 header{
 	background-color: black;
 	text-align: center;
-	padding-top: 50px;
+	padding-top: 0px;
 	padding-bottom: 50px;
 
 }
@@ -22,12 +22,6 @@ header h1{
 
 }
 
-header img{
-	border-radius: 170px;
-	width: 300px;
-	border: 15px solid white;
-}
-
 main{
 	max-width: 1000px;
 	margin: 0 auto;
@@ -37,6 +31,12 @@ main{
 main img{
 	max-width: 100%;
 }
+
+
+header img{
+	max-width: 100%;
+}
+
 h2{
 	font-size: 35px;
 	color: #1C1932;
@@ -63,4 +63,23 @@ footer p{
 
 p.caption{
 	color: #999999;
+}
+
+.image-container {
+    position: relative;
+    /* Remove the parts of the circle that is outside of the image */
+    overflow:hidden;
+}
+.image-container:after {
+    content: '';
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    /* Add more width */
+    width: 120%;
+    /* To form a square, the padding-bottom, needs to have the same value as the width property */
+    padding-bottom: 120%;
+    box-shadow: inset 0px 0px 150px 60px rgba(0,0,0,0.8);
+    border-radius: 50%;
 }
